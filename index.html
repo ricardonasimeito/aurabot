@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080812">
+<meta name="description" content="AuraBot — bots para WhatsApp com proteção, automação e comandos.">
+<title>AuraBot — Seu grupo, no controle</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;font-weight:700;background:#080812;color:#fff;line-height:1.6;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;z-index:-2;opacity:.3;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:70px 70px}body:after{content:"";position:fixed;width:430px;height:430px;top:-170px;left:20%;z-index:-1;border-radius:50%;background:#713cff;filter:blur(110px);opacity:.2}a{text-decoration:none;color:inherit}.container{width:min(1120px,90%);margin:auto}header{height:76px;padding:0 5%;display:flex;align-items:center;gap:28px;position:sticky;top:0;z-index:10;background:#080812cc;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.logo{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:800}.logo-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(135deg,#a273ff,#5635d8);box-shadow:0 0 28px #7545ff88}.logo strong{color:#a98cff}nav{display:flex;align-items:center;gap:23px;margin-left:auto}nav a{color:#a4a5b5;font-size:13px;font-weight:bold}nav a:hover{color:#fff}.nav-button{padding:10px 15px;border:1px solid #a273ff66;border-radius:10px;color:#fff!important;background:#a273ff15}.menu-button,.theme-button{width:40px;height:40px;border:1px solid #ffffff1c;border-radius:11px;color:#fff;background:#ffffff0b;font-size:17px;cursor:pointer}.menu-button{display:none;margin-left:auto}.hero{min-height:650px;padding:90px 0;display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:50px}.badge,.label{color:#b598ff;font-size:11px;font-weight:bold;letter-spacing:2px}.badge{display:inline-block;padding:9px 14px;border:1px solid #a273ff55;border-radius:30px;background:#a273ff12}h1{margin:22px 0;font-size:clamp(55px,8vw,100px);letter-spacing:-6px;line-height:.95}.gradient{background:linear-gradient(100deg,#fff,#a273ff,#55caff);-webkit-background-clip:text;color:transparent}.hero-text{max-width:520px;color:#9b9dae;font-size:17px}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border:0;border-radius:13px;font-weight:bold;font-size:13px;cursor:pointer;transition:.25s}.button:hover{transform:translateY(-3px)}.primary{color:#fff;background:linear-gradient(135deg,#9364ff,#5933d5);box-shadow:0 12px 35px #693bff55}.secondary{border:1px solid #ffffff1c;background:#ffffff08}.trust{display:flex;flex-wrap:wrap;gap:17px;margin-top:27px;color:#77798b;font-size:11px}.hero-card{width:300px;margin:auto;padding:25px;border:1px solid #ffffff1c;border-radius:25px;background:linear-gradient(145deg,#1b1a2df2,#0d0e18f2);box-shadow:0 30px 80px #000b,0 0 50px #7042ff33;animation:flutuar 4s ease-in-out infinite}.online{color:#62e4a6;font-size:11px}.robot{width:125px;height:125px;display:grid;place-items:center;margin:35px auto 18px;border:1px solid #a273ff77;border-radius:35px;background:radial-gradient(circle,#875cff66,#17132f);font-size:67px}.hero-card h2{text-align:center;font-size:20px}.hero-card p{text-align:center;color:#8c8e9e;font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:28px 0;margin-bottom:70px;border-block:1px solid #ffffff12}.stats div{text-align:center;border-right:1px solid #ffffff12}.stats div:last-child{border:0}.stats b{display:block;font-size:19px}.stats span{color:#797b8c;font-size:11px}section{padding:75px 0}.heading{max-width:550px;margin-bottom:42px}.center{text-align:center;margin-right:auto;margin-left:auto}.label{margin-bottom:10px}h2{margin:12px 0;font-size:clamp(38px,5vw,62px);line-height:1.02;letter-spacing:-3px}.heading p{color:#9294a5;font-size:14px}.features,.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card,.plan{padding:27px;border:1px solid #ffffff12;border-radius:20px;background:#ffffff06;transition:.3s}.card:hover,.plan:hover{transform:translateY(-7px);border-color:#a273ff88}.icon{width:55px;height:55px;display:grid;place-items:center;margin-bottom:20px;border-radius:16px;background:#8c5dff25;font-size:27px}.card h3,.plan h3{margin-bottom:8px}.card p,.plan>p{color:#898b9c;font-size:13px}.card p{min-height:62px}.card a{color:#b79eff;font-size:12px;font-weight:bold}.plans{grid-template-columns:repeat(4,1fr)}.plan{position:relative}.plan.popular{border-color:#a273ff;background:linear-gradient(150deg,#8c5dff22,#ffffff06)}.popular-label{position:absolute;top:13px;right:13px;color:#cdbdff;font-size:8px;font-weight:bold}.price{margin:22px 0;font-size:40px;font-weight:900;letter-spacing:-2px}.price small{font-size:13px}.price span{font-size:19px}.plan ul{min-height:105px;list-style:none;color:#999baa;font-size:11px;line-height:2.2}.plan button{width:100%;padding:12px;border:1px solid #ffffff1a;border-radius:11px;color:#fff;background:#ffffff0b;font-weight:bold;cursor:pointer}.plan.popular button,.plan button:hover{background:#7e52ed}.affiliate{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:43px 50px;margin:60px auto;border:1px solid #a273ff55;border-radius:24px;background:linear-gradient(110deg,#8c5dff20,#38bdf80b)}.affiliate h2{font-size:42px}.faq{max-width:760px;margin:auto}details{border-bottom:1px solid #ffffff14}summary{display:flex;justify-content:space-between;padding:20px 0;cursor:pointer;font-size:14px;font-weight:bold}details p{padding:0 30px 20px 0;color:#898b9c;font-size:13px}footer{display:flex;align-items:center;gap:20px;padding:30px 5%;border-top:1px solid #ffffff12}footer p{margin-left:auto;color:#707283;font-size:11px}@keyframes flutuar{50%{transform:translateY(-12px)}}@media(max-width:850px){.hero{grid-template-columns:1fr;text-align:center}.hero-text{margin:auto}.buttons,.trust{justify-content:center}.features,.plans{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){header{gap:10px}.menu-button{display:block}nav{display:none;position:absolute;top:76px;left:5%;right:5%;padding:15px;flex-direction:column;align-items:stretch;gap:5px;border:1px solid #ffffff18;border-radius:15px;background:#121322}nav.open{display:flex}nav a{padding:10px}h1{font-size:61px}.stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(2){border:0}.features,.plans{grid-template-columns:1fr}.affiliate{align-items:flex-start;flex-direction:column;padding:30px}footer{flex-wrap:wrap}footer p{width:100%;margin:0}}
+#videoFundo{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.25;filter:saturate(1.2);pointer-events:none}
+body>header,body>main,body>footer{position:relative;z-index:10}nav{z-index:50;pointer-events:auto}nav a,.button,.plan button{position:relative;z-index:60;pointer-events:auto}section{scroll-margin-top:90px}
+#botaoSom{position:fixed;right:20px;bottom:20px;z-index:20;width:48px;height:48px;border:1px solid #ffffff33;border-radius:50%;background:#111322dd;color:#fff;font-size:20px;cursor:pointer;box-shadow:0 8px 25px #0008}
+#botaoSom:hover{transform:scale(1.08)}
+nav button{font-family:inherit;font-size:13px;cursor:pointer}
+
+.tiktok-button{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff1c;border-radius:11px;color:#fff;background:#ffffff0b;transition:transform .25s ease,box-shadow .25s ease}
+.tiktok-button svg{width:20px;height:20px;fill:currentColor}
+.tiktok-button:hover{transform:scale(1.1);box-shadow:0 0 18px #ff006488}
+
+#backtop-button{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border:1px solid #a273ff88;border-radius:14px;color:#fff;background:linear-gradient(135deg,#9364ff,#5933d5);font-size:25px;font-weight:bold;cursor:pointer;z-index:20;opacity:0;visibility:hidden;transform:translateY(12px);transition:.3s;box-shadow:0 8px 25px #0008}
+#backtop-button.show{opacity:1;visibility:visible;transform:translateY(0)}
+#backtop-button:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 0 22px #8c5dff99}
+@media(max-width:600px){#backtop-button{right:15px;bottom:15px}}
+</style>
+
+<style id="correcao-menu">
+header{padding-left:16px;padding-right:16px}
+.logo{flex-shrink:0;white-space:nowrap}
+.menu-button{position:relative;z-index:100;flex-shrink:0;margin-left:auto}
+.theme-button{position:relative;z-index:100;flex-shrink:0}
+nav{position:relative;z-index:100}
+#videoFundo{pointer-events:none}
+
+@media(max-width:600px){
+  header{gap:8px}
+  .logo{font-size:18px;gap:7px}
+  .logo-icon{width:32px;height:32px}
+  .menu-button{margin-left:auto}
+  nav.open{display:flex!important;z-index:200}
+  nav.open a{display:block;pointer-events:auto}
+}
+</style>
+<link rel="stylesheet" href="animacao.css"><link rel="stylesheet" href="upgrade-premium.css?v=1"></head>
+<body>
+<video id="videoFundo" autoplay muted loop playsinline>
+  <source src="fundo.mp4" type="video/mp4">
+</video>
+<button id="botaoSom" aria-label="Ativar ou desativar áudio">🔇</button>
+<header><a href="#" class="logo"><span class="logo-icon">A</span><span>Aura<strong>Bot</strong></span></a><button class="menu-button" onclick="abrirMenu()">☰</button><nav id="menu"><button class="fechar-menu" type="button">×</button><a href="#recursos">Recursos</a><a href="#planos">Planos</a><button type="button" class="nav-button" onclick="window.location.href='afiliados.html'">Área de Afiliados</button><a href="#duvidas">Dúvidas</a><a class="nav-button" href="https://wa.me/5594984288511?text=Ol%C3%A1!%20Quero%20conhecer%20o%20AuraBot." target="_blank">WhatsApp ↗</a></nav><button class="theme-button" onclick="trocarTema()">☀️</button>
+<a class="tiktok-button"
+href="https://tiktok.com/@rdzx51_"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="TikTok do criador"
+title="TikTok do criador">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M19.6 7.2a5.7 5.7 0 0 1-3.5-1.2v7.1a5.9 5.9 0 1 1-5.9-5.9c.3 0 .7 0 1 .1v3a3 3 0 1 0 2 2.8V2h3a5.7 5.7 0 0 0 3.4 2.6v2.6z"/>
+</svg>
+</a>
+</header>
+<main>
+<section class="hero container"><div><div class="badge">⚡ A NOVA GERAÇÃO DE BOTS PARA WHATSAPP</div><h1>Seu grupo.<br><span class="gradient">Seu controle.</span></h1><p class="hero-text">Automatize, proteja e gerencie seu grupo com o AuraBot. Simples, rápido e poderoso.</p><div class="buttons"><a class="button primary" href="#planos">Escolher meu plano →</a><a class="button secondary" href="#recursos">Conhecer recursos</a></div><div class="trust"><span>🔒 Compra segura</span><span>⚡ Ativação rápida</span><span>💬 Suporte no WhatsApp</span></div></div><div class="hero-card"><div class="online">● AuraBot online</div><div class="robot">🤖</div><h2>Grupo protegido</h2><p>Moderação inteligente ativada</p></div></section>
+<div class="stats container"><div><b>24/7</b><span>Disponibilidade</span></div><div><b>+100</b><span>Comandos</span></div><div><b>3 cliques</b><span>Para começar</span></div><div><b>WhatsApp</b><span>Suporte direto</span></div></div>
+<section id="recursos" class="container"><div class="heading"><div class="label">RECURSOS</div><h2>Mais controle.<br><span class="gradient">Menos trabalho.</span></h2><p>Ferramentas para deixar qualquer grupo mais organizado, seguro e divertido.</p></div><div class="features"><article class="card"><div class="icon">🛡️</div><h3>Proteção inteligente</h3><p>Ajude a manter links, spam e mensagens indesejadas sob controle.</p><a href="#duvidas">Saiba mais ↗</a></article><article class="card"><div class="icon">⚡</div><h3>Automação rápida</h3><p>Deixe tarefas repetitivas por conta do bot e ganhe tempo.</p><a href="#planos">Ver planos ↗</a></article><article class="card"><div class="icon">🤖</div><h3>Comandos poderosos</h3><p>Recursos para administração, diversão e interação no grupo.</p><a href="#planos">Explorar comandos ↗</a></article></div></section>
+<section id="planos" class="container"><div class="heading center"><div class="label">PLANOS</div><h2>Escolha seu <span class="gradient">acesso.</span></h2><p>Comece pequeno ou tenha acesso permanente ao AuraBot.</p></div><div class="plans"><article class="plan"><h3>5 Dias</h3><p>Para experimentar</p><div class="price"><small>R$</small> 5<span>,00</span></div><ul><li>✅ Acesso ao AuraBot</li><li>✅ Comandos principais</li><li>✅ Suporte no WhatsApp</li></ul><button onclick="comprar('5 Dias','5,00')">Escolher plano</button></article><article class="plan popular"><div class="popular-label">MAIS POPULAR ✦</div><h3>1 Semana</h3><p>Para testar de verdade</p><div class="price"><small>R$</small> 8<span>,00</span></div><ul><li>✅ Acesso ao AuraBot</li><li>✅ Comandos principais</li><li>✅ Suporte prioritário</li></ul><button onclick="comprar('1 Semana','8,00')">Escolher plano</button></article><article class="plan"><h3>1 Mês</h3><p>Para usar todo dia</p><div class="price"><small>R$</small> 20<span>,00</span></div><ul><li>✅ Acesso por 30 dias</li><li>✅ Todos os comandos</li><li>✅ Suporte prioritário</li></ul><button onclick="comprar('1 Mês','20,00')">Escolher plano</button></article><article class="plan"><h3>Permanente</h3><p>Sem prazo para acabar</p><div class="price"><small>R$</small> 50<span>,00</span></div><ul><li>✅ Acesso permanente</li><li>✅ Todos os comandos</li><li>✅ Suporte prioritário</li></ul><button onclick="comprar('Permanente','50,00')">Escolher plano</button></article></div></section>
+<section id="afiliados" class="affiliate container"><div><div class="label">PROGRAMA DE AFILIADOS</div><h2>Indique. <span class="gradient">Ganhe.</span></h2><p>Divulgue o AuraBot e receba comissão pelas vendas aprovadas.</p></div><a class="button primary" href="afiliados.html" target="_self">Quero ser afiliado →</a></section>
+<section id="duvidas" class="container"><div class="heading center"><div class="label">DÚVIDAS</div><h2>Antes de <span class="gradient">começar.</span></h2></div><div class="faq"><details><summary>Como recebo o AuraBot depois da compra? <span>＋</span></summary><p>Depois da confirmação do pagamento, você recebe as instruções de ativação pelo WhatsApp.</p></details><details><summary>O pagamento por Pix é seguro? <span>＋</span></summary><p>Vamos integrar um sistema que confirma o pagamento antes de liberar o atendimento.</p></details><details><summary>Posso virar afiliado? <span>＋</span></summary><p>Sim. Fale com o suporte para receber seu código ou link de indicação.</p></details></div></section>
+</main>
+<footer><a href="#" class="logo"><span class="logo-icon">A</span><span>Aura<strong>Bot</strong></span></a><p>© 2026 AuraBot. Feito para grupos mais inteligentes.</p></footer>
+<script>
+function abrirMenu(){
+  document.getElementById('menu').classList.toggle('open');
+}
+document.querySelectorAll('#menu a').forEach(function(link){
+  link.addEventListener('click',function(){
+    document.getElementById('menu').classList.remove('open');
+  });
+});
+function trocarTema(){alert('O modo claro será aprimorado na próxima etapa.')}
+function comprar(plano,valor){const mensagem='Olá! Quero contratar o AuraBot.%0A%0APlano: '+plano+'%0AValor: R$ '+valor+'%0A%0AQuero finalizar meu atendimento.';window.open('https://wa.me/5594984288511?text='+mensagem,'_blank')}
+const videoFundo=document.getElementById("videoFundo");
+const botaoSom=document.getElementById("botaoSom");
+
+botaoSom.addEventListener("click",()=>{
+  videoFundo.muted=!videoFundo.muted;
+  botaoSom.textContent=videoFundo.muted?"🔇":"🔊";
+  if(!videoFundo.muted) videoFundo.play();
+});
+const fecharMenu=document.querySelector(".fechar-menu");
+if(fecharMenu){
+  fecharMenu.addEventListener("click",()=>{
+    document.getElementById("menu").classList.remove("open");
+  });
+}
+</script>
+
+<script id="correcao-links">
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+  link.addEventListener('click',function(event){
+    const destino = link.getAttribute('href');
+
+    if(!destino || destino === '#') return;
+
+    const secao = document.querySelector(destino);
+
+    if(secao){
+      event.preventDefault();
+      document.getElementById('menu').classList.remove('open');
+      secao.scrollIntoView({
+        behavior:'smooth',
+        block:'start'
+      });
+    }
+  });
+});
+</script>
+<script src="scroll.js"></script><script src="comandos.js"></script><script src="menu-fix.js"></script><script src="roleta.js?v=11"></script><script src="comentarios-demo.js?v=4"></script><button id="backtop-button" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+<script>
+const botaoTopo = document.getElementById('backtop-button');
+
+window.addEventListener('scroll', () => {
+  botaoTopo.classList.toggle('show', window.scrollY > 450);
+});
+
+botaoTopo.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+<style>
+#seta-topo-certeira{
+  display:none;
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:48px;
+  height:48px;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  border-radius:14px;
+  color:#fff;
+  background:#7042ff;
+  font-size:28px;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:99999;
+  box-shadow:0 5px 25px #0008;
+}
+#seta-topo-certeira:hover{
+  transform:scale(1.1);
+}
+</style>
+
+<button id="seta-topo-certeira" aria-label="Voltar ao topo">↑</button>
+
+<script>
+(function(){
+  var seta = document.getElementById("seta-topo-certeira");
+
+  function verificarRolagem(){
+    if(window.pageYOffset > 150){
+      seta.style.display = "flex";
+    }else{
+      seta.style.display = "none";
+    }
+  }
+
+  window.addEventListener("scroll", verificarRolagem);
+
+  seta.onclick = function(){
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  verificarRolagem();
+})();
+</script>
+<script src="comentarios-interativos.js?v=2"></script><script src="controles-mobile.js?v=4"></script><script src="configurar-grupo.js?v=1"></script></body>
+</html>

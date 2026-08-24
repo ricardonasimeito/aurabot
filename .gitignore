@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+*-backup.html
+*.bak
+*-antes-*.html
+afiliados-antes-do-upgrade.html
+avatares-comentarios.tar.gz
+
+*.backup
